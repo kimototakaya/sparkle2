@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100%;
+  background-image: url('modules/image/background.jpg');
+}
+
+.Header {
+  height: 70px;
+  width: 100vw;
+  background-color: #7ddbcc;
+  position: relative;
+  border-bottom: solid 3px #93c7ad;
+  &__Logo {
+    position: absolute;
+    left: 60px;
+    top: 10px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Vollkorn', serif;
+}
+
+
+.Header__Body {
+  height: 350px;
+  width: 100%;
+  background-image: url('modules/image/header-cosme.jpg');
+}
+
+.Contents{
+  display: flex;
+  justify-content: center;
+  &__Top{
+    height: 100vh;
+    width: calc(100vw - 40%);
+    background-color: #7ddbcc;
+  }
+  &__Thread {
+    display: flex;
+    justify-content: center;
+    &__List {
+      display: flex;
+      justify-content: center;
+      border-left: 3px solid #27a1d1;
+      margin-top: 40px;
+    }
+  }
+}
+
+.Contents__Main__Cosmes {
+  padding:0.5em 1em;
+  margin: 2em 0;
+  color: #59ecff;
+  background: cadetblue;
+  border-top: solid 10px #59b2db; 
+  display: flex;
+  justify-content: space-around;
+}
+
+.image {
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+}
+
+a {
+  display: block;
+  text-align: start;
+}
+
+.Topic__Top {
+  height: 60px;
+  width: 60%;
+  background-color: greenyellow;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  &__New {
+    padding-top: auto;
+  }
+}
+
+
+
+.Topic__Body {
+  width:  400px;
+  background-color: hotpink;
+  margin: auto;
+}
+
+.form--input {
+  display: flex;
+}
+

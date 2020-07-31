@@ -1,0 +1,52 @@
+.wrapper
+  .Header
+    .Header__Logo 
+      %h2 Sparkle
+    .Header__Side
+      %ul.nav-ber
+        %li.nav-list
+          my page
+
+
+  .Header__Body
+    %ul.slick01
+      %li
+        = image_tag 'menscosme4.jpg', size: '350x350'
+      %li
+        = image_tag 'manscosme5.jpg', size: '350x350'
+      %li
+        = image_tag 'menscosme6.jpg', size: '350x350'
+
+
+
+  .Contents
+    .Contents__Top
+      .Contents__Thread
+        .Contents__Thread__List
+          = link_to posts_path do
+            スレッドはこっち
+      .Contents__Main
+        %ul.Contents__Main__Cosmes
+          %li.Contents__Main__Cosme
+            = image_tag 'menscosme.jpg', height: '200px', width: '200px', class: 'image'
+            = link_to 'https://monomax.jp/archives/74195/' do
+              日用品ってカッコイイんですよ？男心を刺激する日用品５選！
+          %li.Contents__Main__Cosme
+            = image_tag 'menscosme2.jpg', height: '200px', width: '200px', class: 'image'
+            = link_to 'https://monomax.jp/archives/74711/' do
+              【～モテ塾～】モテ肌のためには○○を使った洗顔！ 洗顔料はこれがよかった！
+          %li.Contents__Main__Cosme
+            = image_tag 'menscosme3.jpg', height: '200px', width: '200px', class: 'image'
+            = link_to 'https://monomax.jp/archives/34647/' do
+              思っている以上に他人は不快に思っている 乾燥対策リップクリームをインプレ
+        .Contents__Movies
+          .Contents__Movie
+            %h3 おすすめ動画
+        .Contents__Movie
+          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "300", :src => "https://www.youtube.com/embed/Co4Z4V0HFQo", :width => "400"}
+           
+           
+  
+    -# .Content__Form
+    -#   投稿
+    -#   = link_to new_post_path

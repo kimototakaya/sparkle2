@@ -1,0 +1,11 @@
+.Topic
+  .Topic__Top
+    = link_to new_post_path, class: 'Topic__New' do
+      スレッド新規作成
+  .Topic__Body
+    - @posts.each do |post|
+      .Topic__Row
+        = post.title 
+        = link_to post_path
+      -# .Topic__Row
+      -#   = post.content 

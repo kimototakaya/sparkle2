@@ -1,0 +1,19 @@
+
+.wrapper.wrapper__bg
+  .container
+    = link_to "スレッド一覧に戻る", posts_path 
+    %hr
+    %h1 新規スレッド
+    .panel.form
+      = form_with model: @post do |f|
+        %div
+          .form--label タイトル:
+          .form--input
+            = f.text_field :title
+        %div
+          .form--label 内容
+          .form--input
+            = f.text_field :content
+          = icon('fas', 'image', class: 'form--icon')
+          = f.file_field :image, class: 'form--Input--Image'
+        = f.submit 'スレッドを作成する'
