@@ -4,40 +4,51 @@
 
 .wrapper {
   height: 100%;
-  background-image: url('modules/image/background.jpg');
+  background: linear-gradient(-45deg, rgba(216, 230, 221, 0.493), rgba(223, 219, 221, 0.253)),
+  url('background.jpg');
+  background-size: cover;
 }
 
 .Header {
   height: 70px;
   width: 100vw;
   background-color: #7ddbcc;
-  position: relative;
   border-bottom: solid 3px #93c7ad;
+  display: flex;
+  justify-content: space-between;
   &__Logo {
-    position: absolute;
-    left: 60px;
-    top: 10px;
+    padding: 10px 0 10px 40px;
   }
+}
+
+.nav-list {
+  border: solid 4px #4f81cc;
+  border-radius: 25px;
+  margin: 20px 40px ;
 }
 
 h2 {
   font-size: 30px;
-  font-weight: bold;
-  font-family: 'Vollkorn', serif;
+  color: #71a8df;
+  text-shadow: 1px 1px 0 #FFF, 2px 2px 5px #99ccff, 4px 4px 10px #b2d8ff, 6px 6px 15px #dbedff, 8px 8px 20px #eaf4ff;
 }
 
 
 .Header__Body {
   height: 350px;
   width: 100%;
-  background-image: url('modules/image/header-cosme.jpg');
+  background-image: url('header-cosme.jpg');
+}
+
+.slick01 {
+  display: flex;
+  justify-content: center;
 }
 
 .Contents{
   display: flex;
   justify-content: center;
   &__Top{
-    height: 100vh;
     width: calc(100vw - 40%);
     background-color: #7ddbcc;
   }
@@ -72,6 +83,21 @@ h2 {
 a {
   display: block;
   text-align: start;
+}
+
+.Contents__Movies {
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 3px #e23838;
+  margin-bottom: 10px;
+}
+
+.Contents__Movie {
+  display: flex;
+  justify-content: space-around;
+  &__Youtube {
+
+  }
 }
 
 .Topic__Top {

@@ -5,17 +5,17 @@
     .Header__Side
       %ul.nav-ber
         %li.nav-list
-          my page
+          %h4 my page
 
 
   .Header__Body
     %ul.slick01
       %li
-        = image_tag 'menscosme4.jpg', size: '350x350'
+        = image_tag 'menscosme4.jpg', size: '330x330'
       %li
-        = image_tag 'manscosme5.jpg', size: '350x350'
+        = image_tag 'manscosme5.jpg', size: '330x330'
       %li
-        = image_tag 'menscosme6.jpg', size: '350x350'
+        = image_tag 'menscosme6.jpg', size: '330x330'
 
 
 
@@ -30,20 +30,34 @@
           %li.Contents__Main__Cosme
             = image_tag 'menscosme.jpg', height: '200px', width: '200px', class: 'image'
             = link_to 'https://monomax.jp/archives/74195/' do
-              日用品ってカッコイイんですよ？男心を刺激する日用品５選！
+              日用品ってカッコイイんですよ？
+              %br
+              男心を刺激する日用品５選！
           %li.Contents__Main__Cosme
             = image_tag 'menscosme2.jpg', height: '200px', width: '200px', class: 'image'
             = link_to 'https://monomax.jp/archives/74711/' do
-              【～モテ塾～】モテ肌のためには○○を使った洗顔！ 洗顔料はこれがよかった！
+              【～モテ塾～】モテ肌のためには
+              %br
+              ○○を使った洗顔！
+              %br
+              洗顔料はこれがよかった！
           %li.Contents__Main__Cosme
             = image_tag 'menscosme3.jpg', height: '200px', width: '200px', class: 'image'
             = link_to 'https://monomax.jp/archives/34647/' do
-              思っている以上に他人は不快に思っている 乾燥対策リップクリームをインプレ
+              思っている以上に他人は不快
+              %br
+              に思っている 
+              %br
+                乾燥対策リップクリームをインプレ
         .Contents__Movies
-          .Contents__Movie
+          .Contents__Mov
             %h3 おすすめ動画
-        .Contents__Movie
-          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "300", :src => "https://www.youtube.com/embed/Co4Z4V0HFQo", :width => "400"}
+        %ul.Contents__Movie
+          %li.Contents__Youtube
+          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "300", :src => "https://www.youtube.com/embed/Co4Z4V0HFQo", :width => "300"}
+          %li.Contents__Youtube
+          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "300", :src => "https://www.youtube.com/embed/9mcKWniSrKk", :width => "300"}
+
            
            
   
