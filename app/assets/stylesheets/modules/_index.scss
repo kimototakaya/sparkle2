@@ -22,15 +22,21 @@
 }
 
 .nav-list {
-  border: solid 4px #4f81cc;
-  border-radius: 25px;
+  border: solid 3px #4f81cc;
+  border-radius: 15px;
   margin: 20px 40px ;
+  padding: 8px;
 }
 
 h2 {
   font-size: 30px;
   color: #71a8df;
   text-shadow: 1px 1px 0 #FFF, 2px 2px 5px #99ccff, 4px 4px 10px #b2d8ff, 6px 6px 15px #dbedff, 8px 8px 20px #eaf4ff;
+}
+
+.mypage {
+  text-decoration: none;
+  color: blue($color: #459bd4);
 }
 
 
@@ -42,7 +48,7 @@ h2 {
 
 .slick01 {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .Contents{
@@ -101,26 +107,15 @@ a {
 }
 
 .Topic__Top {
-  height: 60px;
   width: 60%;
   background-color: greenyellow;
   margin: auto;
   display: flex;
   justify-content: center;
-  &__New {
-    padding-top: auto;
-  }
 }
 
 
-
-.Topic__Body {
-  width:  400px;
-  background-color: hotpink;
-  margin: auto;
+.form--title {
+  height: 20px;
+  width: 100%;
 }
-
-.form--input {
-  display: flex;
-}
-

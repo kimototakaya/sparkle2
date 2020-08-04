@@ -1,11 +1,29 @@
 .Topic
   .Topic__Top
-    = link_to new_post_path, class: 'Topic__New' do
-      スレッド新規作成
-  .Topic__Body
-    - @posts.each do |post|
-      .Topic__Row
-        = post.title 
-        = link_to post_path
-      -# .Topic__Row
-      -#   = post.content 
+    -# = link_to "スレッド新規作成", new_post_path, class: 'Topic__New'
+    .panel.form
+      = form_with model: @post do |f|
+        %div
+          .form--label タイトル
+          .form--input
+            = f.text_field :title, class: 'form--title'
+        %div
+          .form--label 内容
+          .form--input
+            = f.text_field :content, class: 'form--title'
+          = icon('fas', 'image', class: 'form--icon')
+          = f.file_field :image, class: 'form--iamge'
+        = f.submit 'スレッドを作成する'
+  .Message__Info
+    - @post.each do |post|
+      .Message__Title
+        = post.title
+      .Message__Content
+        = post.content
+  -# .Topic__Body
+  -#   -# - @posts.each do |post|
+  -#     .Topic__Row
+  -#       = post.title 
+  -#       = link_to post_path
+  -#     -# .Topic__Row
+  -#     -#   = post.content 
