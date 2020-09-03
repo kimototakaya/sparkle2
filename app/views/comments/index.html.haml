@@ -5,9 +5,12 @@
     .Header__Side
       %ul.nav-ber
         %li.nav-list
-          = link_to new_user_registration_path class: "mypage" do
-            %h4 my page
-
+          - if user_signed_in?
+            = link_to new_user_registration_path class: "mypage" do
+              %h4 my page
+          - else
+            = link_to new_user_registration_path class: "mypage" do
+              %h4 sign up
 
   .Header__Body
     %ul.slick01
