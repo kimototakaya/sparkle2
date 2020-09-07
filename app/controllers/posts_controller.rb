@@ -2,18 +2,20 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
   # before_action :set_post
   def index
-    @posts = Post.all
+    post = Post.all
+    @posts = post.includes(:user).order('created_at DESC')
   end
 
   def new
-    if @post.new
-      redirect_to new_post
-    end
+    @post = Post.new
   end
 
   def create
-    @post = Post.new
-    @post = Post.save(@post.id)
+    @post = Post.create
+    if @post.save
+    else
+      render :new
+    end
   end
 
   def show

@@ -1,8 +1,8 @@
 .Topic
   .Topic__Top
-    -# = link_to "スレッド新規作成", new_post_path, class: 'Topic__New'
+    = link_to "スレッド新規作成", new_post_path, class: 'Topic__New'
     .panel.form
-      = form_with model: @post do |f|
+      -# = form_with(model: @post, local: true) do |f|
         %div
           .form--label タイトル
           .form--input
@@ -15,11 +15,11 @@
           = f.file_field :image, class: 'form--iamge'
         = f.submit 'スレッドを作成する'
   .Message__Info
-    - @post.each do |post|
+    - @posts.each do |post|
       .Message__Title
-        = post.title
+        = post.title(user.id)
       .Message__Content
-        = post.content
+        = post.content(user.id)
   -# .Topic__Body
   -#   -# - @posts.each do |post|
   -#     .Topic__Row
