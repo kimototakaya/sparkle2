@@ -6,12 +6,15 @@
       %ul.nav-ber
         %li.nav-list
           - if user_signed_in?
-            = link_to new_user_registration_path class: "mypage" do
+            = link_to user_path(current_user), class: "mypage" do
               %h4 my page
+            = link_to destroy_user_session_path(current_user), method: :delete, class: "mypage" do
+              %h4 sign out
           - else
             = link_to new_user_registration_path class: "mypage" do
               %h4 sign up
-
+            = link_to new_user_session_path class: "mypage" do
+              %h4 sign in
   .Header__Body
     %ul.slick01
       %li
@@ -20,9 +23,6 @@
         = image_tag 'manscosme5.jpg', size: '330x330'
       %li
         = image_tag 'menscosme6.jpg', size: '330x330'
-
-
-
   .Contents
     .Contents__Top
       .Contents__Thread

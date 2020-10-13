@@ -11,11 +11,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create
-    if @post.save
-    else
-      render :new
-    end
+    @post = Post.create(post_params)
+    # binding.pry
+    @post = Post.save
+    # redirect_to posts_path
   end
 
   def show
@@ -25,7 +24,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).parmit(:content, :title, :image).merge(user_id current_user.id)
+    params.require(:post).permit(:content, :title, :image)
   end
 
   # def set_post
