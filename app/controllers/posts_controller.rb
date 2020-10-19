@@ -12,9 +12,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    # binding.pry
-    @post = Post.save
-    # redirect_to posts_path
   end
 
   def show
