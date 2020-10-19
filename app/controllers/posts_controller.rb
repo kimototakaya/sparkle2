@@ -12,6 +12,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
+    binding.pry
   end
 
   def show
@@ -21,7 +22,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content, :title, :image)
+    params.require(:post).permit(:title, :content, :image)
   end
 
   # def set_post
