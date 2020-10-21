@@ -17,9 +17,9 @@
   .Message__Info
     - @posts.each do |post|
       .Message__Title
-        = post.title(user.id)
+        = post.title
       .Message__Content
-        = post.content(user.id)
+        = post.content
   -# .Topic__Body
   -#   -# - @posts.each do |post|
   -#     .Topic__Row
