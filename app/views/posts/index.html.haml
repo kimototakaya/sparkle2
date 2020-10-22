@@ -14,16 +14,9 @@
           = icon('fas', 'image', class: 'form--icon')
           = f.file_field :image, class: 'form--iamge'
         = f.submit 'スレッドを作成する'
-  .Message__Info
+  .Post__Info
     - @posts.each do |post|
-      .Message__Title
+      .Post__Title
         = post.title
-      .Message__Content
+      .Post__Content
         = post.content
-  -# .Topic__Body
-  -#   -# - @posts.each do |post|
-  -#     .Topic__Row
-  -#       = post.title 
-  -#       = link_to post_path
-  -#     -# .Topic__Row
-  -#     -#   = post.content 
