@@ -9,11 +9,11 @@
           %div
             = f.label :title, "タイトル:"
             .Form-Control
-              = f.text_field :title, class: "form-control form-width-md"
+              = f.text_field :title, class: "form-control"
           %div
             = f.label :content, "内容"
             .form--input
               = f.text_field :content, class: "form-control"
             = icon('fas', 'image', class: 'form--icon')
             = f.file_field :image, class: 'form--Input--Image'
-          = f.submit 'スレッドを作成する' 
+          = f.submit 'スレッドを作成する' , class: "btn btn-info"
