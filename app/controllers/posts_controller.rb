@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
   # before_action :set_post
+  PER = 8
+
   def index
-    post = Post.all
+    post = Post.page(params[:post]).per(PER)
     @posts = post.includes(:user).order('created_at DESC')
   end
 
