@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def index
     post = Post.page(params[:post]).per(PER)
-    @posts = post.includes(:user).order('created_at DESC')
+    @posts = post.all.order('created_at DESC')
   end
 
   def new
