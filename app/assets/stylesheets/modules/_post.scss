@@ -8,8 +8,13 @@
 .Post__Container {
   border: solid 1px #232323;
   border-radius: 5px;
+  width: 70%;
   &__User {
     display: flex;
+    padding-top: 20px;
+    &__Box {
+      margin-left: 60px;
+    }
   }
 }
 
