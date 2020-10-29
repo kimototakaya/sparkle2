@@ -27,5 +27,5 @@
               = post.title
             .Post__Content
               内容
-              = post.content
+              = post.content.truncate(20)
     - paginate @posts

@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   def index
     post = Post.page(params[:post]).per(PER)
     @posts = post.all.order('created_at DESC')
-    @posts = truncate(content.id)
   end
 
   def new
