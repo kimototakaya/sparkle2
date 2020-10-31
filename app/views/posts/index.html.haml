@@ -27,5 +27,4 @@
               = post.title
             .Post__Content
               = link_to post.content.truncate(20), post_path(post.id), class:"Post__Content"
-              -# = post.content.truncate(20)
     - paginate @posts
