@@ -17,7 +17,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    post = Post.find(params[:id])
+    @post = Post.find(params[:id])
+    @comment = comment.new
+    @comment = @post.comment.create
   end
 
   private

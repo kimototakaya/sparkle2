@@ -9,16 +9,17 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new
-    @post_id = params[:post_id]
-    @comment.post_id = @post_id
-    @comment.body = params[:comment][:body]
-    @post = Post.find(@post_id)
-    @comment.user_id = current_user.id
-    if @comment.save
-      redirect_to post_path(@post_id), notice: '投稿しました'
-    else
-      render 'comments/new', alert: '投稿できませんでした'
-    end
+    @comment = Comment.create(comment_params)
   end
+  
+  private
+
+  def comment_params
+    params.require(:comment).permit(:message).merge(post_id: params[:post_id])
+  end
+    # if @comment.save
+    #   redirect_to post_path(@post_id), notice: '投稿しました'
+    # else
+    #   render 'comments/new', alert: '投稿できませんでした'
+    # end
 end
