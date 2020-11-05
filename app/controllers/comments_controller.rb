@@ -17,9 +17,4 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:message).merge(post_id: params[:post_id])
   end
-    # if @comment.save
-    #   redirect_to post_path(@post_id), notice: '投稿しました'
-    # else
-    #   render 'comments/new', alert: '投稿できませんでした'
-    # end
 end
