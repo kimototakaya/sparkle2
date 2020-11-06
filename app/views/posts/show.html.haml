@@ -2,12 +2,12 @@
   .content_post{:style => "background-image: url(#{@post.image});"}
     - if user_signed_in? && current_user.id == @post.user_id
       .more
-        -# %span= image_tag 'arrow_top.png'
-    %p= @post.content
     %span.name
       %a{:href => "/users/#{@post.user.id}"}
         %span 投稿者
         = @post.user.name
+        %p= @post.content
+        = image_tag @post.image, alt: '', height: '', width: '', class: ''
   .container
     - if current_user
       -# = form_with(model: [@post, @comment], local: true ) do |form|
