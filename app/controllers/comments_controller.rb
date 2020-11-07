@@ -1,12 +1,4 @@
 class CommentsController < ApplicationController
-  def index
-    @posts = Post.all
-  end
-
-  def new
-    @post_id = params[:post_id]
-    @comment = Comment.new
-  end
 
   def create
     @comment = Comment.create(comment_params)

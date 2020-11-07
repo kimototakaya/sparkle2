@@ -7,10 +7,10 @@
         %span 投稿者
         = @post.user.name
         %p= @post.content
-        = image_tag @post.image, alt: '', height: '', width: '', class: ''
+        -# = image_tag @post.image
   .container
     - if current_user
-      -# = form_with(model: [@post, @comment], local: true ) do |form|
+      = form_with(model: @comment, local: true ) do |form|
         = form.text_area :text, placeholder: "コメントする", rows: "2", class: "textbox"
         = form.submit "SEND", class: "form__submit"
     - else
