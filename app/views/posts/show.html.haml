@@ -24,24 +24,4 @@
             %strong
               = link_to comment.user.nickname, "/users/#{comment.user_id}"
               ：
-            = comment.text
-
-
--# .container
--#   = @post.title
--#   %span.name
--#   = @post.content
--#   .tab-content
--#   #msgs.tab-pane.fade.show.active{:role => "tabpanel"}
--#     \:
--#   #frms.tab-pane.fade{:role => "tabpanel"}
--#     \:
-
-  -# - if @comments
-  -# - @comments.each do |comment|
-  -#   %p
-  -#     %strong
-  -#       = link_to comment.user.nickname, "/users/#{comment.user_id}"
-  -#       ：
-  -#     = comment.text
-
+            = comment.message
