@@ -28,10 +28,6 @@ class PostsController < ApplicationController
     params.require(:post).permit(:content, :title, :image)
   end
 
-  # def set_post
-  #   @post = Post.find(params[:post_id])
-  # end
-
   def move_to_index
     unless user_signed_in?
       redirect_to action: :index
