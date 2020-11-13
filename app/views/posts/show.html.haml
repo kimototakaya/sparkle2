@@ -4,8 +4,8 @@
       - if user_signed_in? && current_user.id == @post.user_id
         .more
       %span.name
-        %a{:href => "/users/#{@post.user.id}"}
-          %span 投稿者
+        %div{:href => "/users/#{@post.user.id}"}
+          投稿者
           = @post.user.name
           %p= @post.content
           -# = image_tag @post.image
