@@ -27,3 +27,10 @@
   display: flex;
   justify-content: center;
 }
+
+.contents.row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
